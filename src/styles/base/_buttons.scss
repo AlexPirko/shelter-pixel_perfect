@@ -1,0 +1,69 @@
+.button {  
+  display: inline-flex;
+  font-family: 'Georgia';
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  padding: 13px 43px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.button_primary {  
+  background-color: $color-primary;
+  &:hover{
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+
+.button_secondary {  
+  background-color: transparent;
+  &:hover{
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+
+.button_arrow {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  background-color: transparent;
+  transition: all 0.4s;
+  cursor: pointer;
+  &:not([disabled]):hover {
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+  &:disabled {
+    filter: grayscale(50%) opacity(50%);
+    cursor: default;
+  }
+  &.active {
+    background-color: $color-primary;
+  }
+}
+
+.single_arrow {
+  background: url(../assets/images/icons/arrow.svg) no-repeat center;
+}
+
+.dobble_arrow {
+  background: url(../assets/images/icons/dbl-arrow.svg) no-repeat center;
+}
+
+.sngl_arrow {
+  background: url(../assets/images/icons/sngl-arrow.svg) no-repeat center;
+}
+
+.left-btn,
+.left-pets-btn {
+  transform: rotate(180deg);
+}

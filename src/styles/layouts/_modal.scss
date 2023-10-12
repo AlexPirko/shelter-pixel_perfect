@@ -1,0 +1,142 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.modal__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_close {
+  position: absolute;
+  right: -41px;
+  top: -51px;
+  background: url(../assets/images/icons/cross.svg) no-repeat 50% 50%;
+  @include mobile-l {
+    right: -32px;
+    top: -55px;
+  }
+}
+
+.modal__wrapper {
+  position: absolute;
+  @include mobile-l {
+    padding: 0 0px 0 15px;
+  }
+}
+
+.modal__window {
+  display: flex;
+  max-width: 900px;
+  max-height: 500px;
+  background: #FAFAFA;
+  border-radius: 9px;
+  @include desctop {
+    max-width: 800px;
+  }
+  @include tablet {
+    max-width: 630px;
+    max-height: 370px;
+  }
+}
+
+.modal__img-wrapper {
+  width: 60%;
+  @include mobile-xl {
+    display: none;
+  }
+}
+
+.modal__img {
+  display: block;
+  width: 100%;
+  border-radius: 9px 0 0 0;
+  @include tablet {
+    padding: 10px 0;
+    width: 105%;
+  }
+}
+
+.modal__description-wrapper {
+  width: 45%;
+  max-width: 351px;
+  color: #000000;
+  padding: 51px 19px 0 29px;
+  @include tablet {
+    padding: 11px 19px 0 29px;
+  }
+  @include mobile-xl {
+    width: 100%;
+    max-width: 280px;
+  }
+  @include mobile-l {
+    max-width: 220px;
+    padding: 8px 5px 0px 10px;
+  }
+}
+
+.modal__title {
+  @include mobile-l {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+.modal__subtitle {
+  padding: 8px 0 41px 0;
+  @include tablet {
+    padding: 0px 0 15px 0;
+  }
+  @include mobile-l {
+    text-align: center;
+  }
+}
+
+.modal__text {
+  font-size: 1.5rem;
+  line-height: 113%;
+  @include tablet {
+    font-size: 1.3rem;
+    line-height: 110%;
+  }
+  @include mobile-l {
+    text-align: justify;
+  }
+}
+
+.modal__list {
+  padding: 22px 0 0 13px;
+  @include tablet {
+    padding: 0 0 0 13px;
+  }
+  ::marker {
+    color: $color-primary;
+    width: 4px;
+    height: 4px;
+  }
+  @include mobile-l {
+    margin: 17px 0 4px 0;
+  }
+}
+
+.modal__item {
+  list-style-type: disc;
+  font-family: 'Georgia';
+  font-size: 15px; 
+  letter-spacing: 0.06em;
+  padding-bottom: 4px;
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+
+.modal__item-title {
+  font-weight: 700;
+}

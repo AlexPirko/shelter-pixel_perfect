@@ -1,0 +1,109 @@
+.donation {
+  background: $color-light-l;
+  padding: 80px 0 100px 0;
+  @include mobile-l {
+    padding: 42px 0 42px 0;
+  }
+}
+
+.donation__wrapper {
+  max-width: 915px;
+  gap: 30px;
+  >* {
+    flex-basis: 40%;
+  }
+  @include tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 60px;
+  }
+  @include mobile-l {
+    gap: 42px;
+  }
+}
+
+.donation__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.donation__img {
+  object-fit: contain;
+  @include mobile-xl {
+    width: 100%;
+  }
+  @include mobile-xl {
+    width: 87%;
+  }
+}
+
+.donation__description {
+  @include mobile-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.donation__description-title {
+  max-width: 300px;
+  @include mobile-l {
+    text-align: center;
+    max-width: 220px;
+  }
+}
+
+.donation__description-subtitle {
+  max-width: 308px;
+  margin: 20px 0 18px 0;
+  font-size: 1.5rem;
+  color: $color-dark-l;
+  @include mobile-l {
+    margin: 23px 0;
+    letter-spacing: 0;
+  }
+}
+
+.donation__description-card_wrapper {
+  max-width: 318px;
+  display: flex;
+  background: $color-primary;
+  border-radius: 9px;
+  padding: 10px 15px;
+  gap: 13px;
+  @include mobile-l {
+    max-width: 260px;
+  }
+}
+
+.donation__description-card_num {
+  @include mobile-l {
+    font-size: 1.5rem;
+    line-height: 160%;
+  }
+}
+
+.donation__link {
+  cursor: pointer;
+  &:hover {
+    filter: opacity(70%);
+  }
+}
+
+.donation__description-card_img {
+  display: block;
+}
+
+.donation__description-text {
+  max-width: 380px;
+  margin-top: 20px;
+  font-family: 'Arial';
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: $color-dark-m;
+  @include mobile-l {
+    text-align: justify;
+    max-width: 278px;
+  }
+}

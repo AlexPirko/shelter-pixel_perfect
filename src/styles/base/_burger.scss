@@ -1,0 +1,59 @@
+%burger-line {
+  display: none;
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  @include mobile-xl {
+    display: inline-block;
+  }
+}
+
+.burger__wrapper {
+  cursor: pointer;
+  z-index: 30;
+  transition: all 1.2s;
+  &.active {
+    transform: rotate(90deg);
+  }
+}
+
+.burger {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  z-index: 10;
+  &::before {
+    @extend %burger-line;
+    background-color: $color-primary;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    @extend %burger-line;
+    background-color: $color-primary;
+    bottom: 0; 
+    left: 0;
+  }
+}
+
+.burger__line {
+  @extend %burger-line;
+  background-color: $color-primary;
+  top: calc(50% - 1px);
+  left: 0;
+}
+
+.burger-pets {
+  &::before {
+    background-color: #000000;
+  }
+  &::after {
+    background-color: #000000;
+  }
+}
+
+.burger__line-pets {
+  background-color: #000000;
+}

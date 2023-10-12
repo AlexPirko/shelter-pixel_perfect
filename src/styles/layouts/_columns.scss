@@ -1,0 +1,15 @@
+.five-column {
+  @include flex-columns($width: 18%)
+}
+
+.four-column {
+  @include flex-columns($width: 23%)
+}
+
+.three-column {
+  @include flex-columns($width: 24.5%)
+}
+
+.two-column {
+  @include flex-columns($width: calc(50% - 10px));
+}

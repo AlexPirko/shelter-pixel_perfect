@@ -1,0 +1,124 @@
+.header {
+  margin-top: 28px;
+  padding-bottom: 30px;
+  @include tablet {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.header__wrapper {
+  @include flex-base;
+  @include mobile-l {
+    padding: 2px 20px;
+  }
+}
+
+.logo__text {
+  font-size: 1.3rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  padding: 11px 0 0 5px;
+  color: $color-light-xl;
+}
+
+.navigation {
+  @include mobile-xl {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background: $color-dark-3xl;
+    transition: all 1.2s;
+  }
+  &.active {
+    @include mobile-xl {
+      right: 0px;
+      z-index: 20;
+    }
+  }
+}
+
+.navigation__list {
+  @include flex-base;
+  @include mobile-xl {
+    flex-direction: column;
+    margin-top: 262px;
+    margin-right: 38px;
+  }
+}
+
+.navigation__list-item {
+  color: $color-dark-s;
+  @include mobile-xl {
+    font-size: 3.2rem;
+    color: $color-light-s;
+  }
+  &:hover {
+    color: $color-primary-light;
+  }
+  &.active {
+    border-bottom: 2px solid $color-primary;
+    color: $color-light-s;
+    cursor: not-allowed;
+    @include mobile-xl {
+      padding-bottom: 14px;
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+}
+
+.navigation__list-item:not(:first-child) {
+  margin-left: 36px;
+  @include mobile-xl {
+    margin: 0;
+    padding-top: 54px;
+  }
+}
+
+.navigation__list-item:nth-child(3) {
+  @include mobile-xl {
+    padding-top: 65px;
+    margin-bottom: 13px;
+  }
+}
+
+//Header our-pets
+.header-pets {
+  margin-top: 29px;
+  padding-bottom: 30px;
+  @include mobile-l {
+    padding-bottom: 26px;
+  }
+}
+
+.title-pets {
+  color: $color-dark-l;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.text-pets {
+  color: $color-dark-3xl;
+}
+
+.item-pets {
+  color: $color-dark-l;
+  &:hover {
+    color: $color-dark-3xl;
+  }
+  &.active {
+    border-bottom: 2px solid $color-primary;
+    color: $color-dark-l;
+    cursor: not-allowed;
+  }
+  @include mobile-xl {
+    font-size: 3.2rem;
+    color: $color-light-s;
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import 'normalize.css';
+
+@import 'abstract/constants';
+@import 'abstract/mixins';
+
+@import 'base/base';
+@import 'base/buttons';
+@import 'base/fonts';
+@import 'base/burger';
+
+@import 'layouts/container';
+@import 'layouts/columns';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/modal';
+
+
+@import 'components/main/start-screen';
+@import 'components/main/about';
+@import 'components/main/pets';
+@import 'components/main/help';
+@import 'components/main/donation';
+@import 'components/out-pets/pets-content';
+
